@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "Furniro",
+		"path": ".."
+	},
+	{
+		"name": "public",
+		"path": "../../10-lesson/public"
+	}
+],
+  "settings": {}
+}

@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "img": "/sec3/sec3_img1.png",
+      "h4": "Syltherine",
+      "p1": "Stylish cafe chair",
+      "h5": "Rp 2.500.000",
+      "p2": "Rp 3.500.000"
+    },
+    {
+      "id": "2",
+      "img": "/sec3/sec3_img2.png",
+      "h4": "Leviosa",
+      "p1": "Stylish cafe chair",
+      "h5": "Rp 2.500.000",
+      "p2": ""
+    },
+    {
+      "id": "3",
+      "img": "/sec3/sec3_img3.png",
+      "h4": "Lolito",
+      "p1": "Luxury big sofa",
+      "h5": "Rp 7.000.000",
+      "p2": "Rp 14.000.000"
+    },
+    {
+      "id": "4",
+      "img": "/sec3/sec3_img4.png",
+      "h4": "Respira",
+      "p1": "Outdoor bar table and stool",
+      "h5": "Rp 500.000",
+      "p2": ""
+    },
+    {
+      "id": "5",
+      "img": "/sec3/sec3_img5.png",
+      "h4": "Grifo",
+      "p1": "Night lamp",
+      "h5": "Rp 1.500.000",
+      "p2": ""
+    },
+    {
+      "id": "6",
+      "img": "/sec3/sec3_img6.png",
+      "h4": "Muggo",
+      "p1": "Small mug",
+      "h5": "Rp 150.000",
+      "p2": ""
+    },
+    {
+      "id": "7",
+      "img": "/sec3/sec3_img7.png",
+      "h4": "Pingky",
+      "p1": "Cute bed set",
+      "h5": "Rp 7.000.000",
+      "p2": "Rp 14.000.000"
+    },
+    {
+      "id": "8",
+      "img": "/sec3/sec3_img8.png",
+      "h4": "Potty",
+      "p1": "Minimalist flower pot",
+      "h5": "Rp 500.000",
+      "p2": ""
+    }
+  ]
+}
