@@ -32,7 +32,7 @@ const Header = () => {
           <Link to="">
             <img src={search_svg} alt="" />
           </Link>
-          <Link to="">
+          <Link to="/cart">
             <img src={shopping_svg} alt="" />
           </Link>
         </div>

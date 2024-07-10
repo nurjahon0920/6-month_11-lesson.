@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 import "./App.scss";
 import Single from "./pages/Single";
+import Cart from "./pages/Cart";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Shop" element={<Shop />} />
+          <Route path="/Cart/:id" element={<Cart />} />
           <Route path="/Single/:id" element={<Single />} />
         </Routes>
       </main>

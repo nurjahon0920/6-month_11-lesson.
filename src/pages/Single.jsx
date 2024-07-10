@@ -21,7 +21,6 @@ const Single = () => {
         console.log(err);
       });
   });
-
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
@@ -33,7 +32,6 @@ const Single = () => {
         console.error(error);
       });
   });
-
   let links = data?.slice(0, 4).map((link) => (
     <div className="sec3_card w-[285px] h-[446px]" key={link.id}>
       <div className="bg-[#F4F5F7] text-left overflow-hidden relative group shadow-md">
@@ -72,6 +70,20 @@ const Single = () => {
       </div>
     </div>
   ));
+
+  //
+  //
+  //
+
+  const [productCount, setProductCount] = useState(0);
+  const incrementProductCount = () => {
+    setProductCount(productCount + 1);
+  };
+  const decrementProductCount = () => {
+    if (productCount > 0) {
+      setProductCount(productCount - 1);
+    }
+  };
   return (
     <div>
       <div className="single_top bg-[#F9F1E7]">
@@ -135,6 +147,25 @@ const Single = () => {
             Kilburn is a compact, stout-hearted hero with a well-balanced audio
             which boasts a clear midrange and extended highs for a sound.
           </p>
+          <div className="flex items-center">
+            <div className="border-[1px] border-[#9f9f9f] border-solid flex gap-7 items-center py-4 rounded-[10px] px-3">
+              <button className="" onClick={decrementProductCount}>
+                -
+              </button>
+              <p className="">{productCount}</p>
+              <button className="" onClick={incrementProductCount}>
+                +
+              </button>
+            </div>
+            <Link
+              to={`/cart/${id}`}
+              className="border-[1px] border-black border-solid py-4 px-12 rounded-[10px] mr-[10px] ml-[18px]">
+              Add To Cart
+            </Link>
+            <button className="border-[1px] border-black border-solid py-4 px-12 rounded-[10px]">
+              + Compare
+            </button>
+          </div>
         </div>
       </div>
       <div className="border-t-2 border-solid border-[#D9D9D90]">

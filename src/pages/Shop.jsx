@@ -37,9 +37,11 @@ const Shop = () => {
         </div>
         <div className="sec3_overlay absolute left-0 top-[-100%] opacity-0 group-hover:opacity-100 group-hover:top-[0] group-hover:backdrop:blur-sm divide-neutral-500 p-4 w-full h-[301px] bg-black/50 duration-[350ms] pt-44">
           <Slide cascade className="items-center text-center text-white">
-            <button className="bg-white text-[#B88E2F] py-3 px-14">
+            <Link
+              to={`/cart/${link.id}`}
+              className="bg-white text-[#B88E2F] py-3 px-14">
               Add to cart
-            </button>
+            </Link>
             <Fade className="" cascade={0.1}>
               <div className="flex flex-row items-center justify-center gap-2 mt-5">
                 <button className="Share flex items-center gap-1">
@@ -63,7 +65,7 @@ const Shop = () => {
   ));
   return (
     <div>
-      <div className="container mx-auto p-5 text-center">
+      <div className="mx-auto max-w-[1241px] p-5 text-center">
         <div className="shop_top">
           <img src={shop_top_img} alt="" className="" />
           <div className="shop_top_content w-full absolute top-[260px] left-[-30px]">
@@ -80,17 +82,17 @@ const Shop = () => {
           </div>
           <div className="shop_top_bottom justify-between bg-[#F9F1E7]"></div>
         </div>
-        <div className=" items-center">
-          <div className="flex flex-wrap gap-8 justify-center mb-10">
+        <div className=" items-center flex flex-wrap">
+          <div className="flex flex-wrap justify-between mb-10 max-w-[1203px] w-full">
             {links}
           </div>
-          <div className="flex flex-wrap gap-8 justify-center mb-10">
+          <div className="flex flex-wrap justify-between mb-10 max-w-[1203px] w-full">
             {links}
           </div>
-          <div className="flex flex-wrap gap-8 justify-center mb-10">
+          <div className="flex flex-wrap justify-between mb-10 max-w-[1203px] w-full">
             {links}
           </div>
-          <div className="flex flex-wrap gap-8 justify-center mb-10">
+          <div className="flex flex-wrap justify-between mb-10 max-w-[1203px] w-full">
             {links}
           </div>
         </div>
