@@ -40,7 +40,7 @@ const Single = () => {
           <h4 className="text-2xl font-bold">{link.h4}</h4>
           <p className="text-base text-[#898989] font-medium mt-2">{link.p1}</p>
           <div className="flex justify-between items-center mt-2">
-            <h5 className="text-2xl">{link.h5}</h5>
+            <h5 className="text-2xl">Rs. {link.h5}</h5>
             <p className="text-[#B0B0B0] font-medium text-base">{link.p2}</p>
           </div>
         </div>
@@ -135,7 +135,7 @@ const Single = () => {
         </div>
         <div className="single_content">
           <h4 className="text-[42px]">{single?.h4}</h4>
-          <h5 className="text-2xl text-[#9f9f9f] mb-4">{single?.h5}</h5>
+          <h5 className="text-2xl text-[#9f9f9f] mb-4">Rs. {single?.h5}</h5>
           <div className="flex items-center">
             <img src={yulduz} alt="" className="pr-2" />
             <p className="text-[#9f9f9f] font-normal text-[13px] pl-5 border-l-[1px]  h-[30px] border-solid border-[#D9D9D90]">
@@ -175,6 +175,23 @@ const Single = () => {
             Additional Information
           </h3>
           <h3 className="text-[#9F9F9F] font-normal text-2xl">Reviews [5]</h3>
+        </div>
+        <div className="max-w-[1021px] mx-auto flex flex-col gap-[30px] text-[#9f9f9f] pt-[37]">
+          <p className="text-base">
+            Embodying the raw, wayward spirit of rock `n` roll, the Kilburn
+            portable active stereo speaker takes the unmistakable look and sound
+            of Marshall, unplugs the chords, and takes the show on the road.
+          </p>
+          <p className="text-base mb-9">
+            Weighing in under 7 pounds, the Kilburn is a lightweight piece of
+            vintage styled engineering. Setting the bar as one of the loudest
+            speakers in its class, the Kilburn is a compact, stout-hearted hero
+            with a well-balanced audio which boasts a clear midrange and
+            extended highs for a sound that is both articulate and pronounced.
+            The analogue knobs allow you to fine tune the controls to your
+            personal preferences while the guitar-influenced leather strap
+            enables easy and stylish travel.
+          </p>
         </div>
       </div>
       <div className="single_bottom text-center pt-[55px] border-t-2 border-solid border-[#D9D9D90] mt-[66px]">

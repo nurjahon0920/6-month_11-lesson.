@@ -6,6 +6,10 @@ import shop_top_img from "../assets/shop/shop_bg.png";
 import heart_svg from "/like_icon.svg";
 import share_icon from "/share_icon.svg";
 import compare_icon from "/compare_icon.svg";
+import cart_bottom1 from "../assets/cart/cart_bottom1.svg";
+import cart_bottom2 from "../assets/cart/cart_bottom2.svg";
+import cart_bottom3 from "../assets/cart/cart_bottom3.svg";
+import cart_bottom4 from "../assets/cart/cart_bottom4.svg";
 
 import { Link } from "react-router-dom";
 
@@ -31,7 +35,7 @@ const Shop = () => {
           </Link>
           <p className="text-base text-[#898989] font-medium mt-2">{link.p1}</p>
           <div className="flex justify-between items-center mt-2">
-            <h5 className="text-2xl">{link.h5}</h5>
+            <h5 className="text-2xl">Rs. {link.h5}</h5>
             <p className="text-[#B0B0B0] font-medium text-base">{link.p2}</p>
           </div>
         </div>
@@ -94,6 +98,66 @@ const Shop = () => {
           </div>
           <div className="flex flex-wrap justify-between mb-10 max-w-[1203px] w-full">
             {links}
+          </div>
+        </div>
+      </div>
+      <div className="Shop_bottom bg-[#FAF3EA]">
+        <div className="flex flex-wrap justify-between mx-auto max-w-[1334px] py-[100px]">
+          <div className="flex gap-[10px]">
+            <img src={cart_bottom1} alt="" className="" />
+            <div className="flex flex-col gap-[2px]">
+              <h3 className="text-[#242424] font-semibold text-[25px]">
+                High Quality
+              </h3>
+              <p
+                className="
+              text-[#898989] font-medium text-xl
+              ">
+                crafted from top materials
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-[10px]">
+            <img src={cart_bottom2} alt="" className="" />
+            <div className="flex flex-col gap-[2px]">
+              <h3 className="text-[#242424] font-semibold text-[25px]">
+                Warranty Protection
+              </h3>
+              <p
+                className="
+              text-[#898989] font-medium text-xl
+              ">
+                Over 2 years
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-[10px]">
+            <img src={cart_bottom3} alt="" className="" />
+            <div className="flex flex-col gap-[2px]">
+              <h3 className="text-[#242424] font-semibold text-[25px]">
+                Free Shipping
+              </h3>
+              <p
+                className="
+              text-[#898989] font-medium text-xl
+              ">
+                Order over 150 $
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-[10px]">
+            <img src={cart_bottom4} alt="" className="" />
+            <div className="flex flex-col gap-[2px]">
+              <h3 className="text-[#242424] font-semibold text-[25px]">
+                24 / 7 Support
+              </h3>
+              <p
+                className="
+              text-[#898989] font-medium text-xl
+              ">
+                Dedicated support
+              </p>
+            </div>
           </div>
         </div>
       </div>

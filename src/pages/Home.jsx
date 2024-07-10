@@ -38,7 +38,7 @@ const Home = () => {
           </Link>
           <p className="text-base text-[#898989] font-medium mt-2">{link.p1}</p>
           <div className="flex justify-between items-center mt-2">
-            <h5 className="text-2xl">{link.h5}</h5>
+            <h5 className="text-2xl">Rs. {link.h5}</h5>
             <p className="text-[#B0B0B0] font-medium text-base">{link.p2}</p>
           </div>
         </div>

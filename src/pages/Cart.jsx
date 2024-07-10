@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Cart_top_img from "../assets/shop/shop_bg.png";
+import delete_icon from "../assets/cart/delete_icon.svg";
+import cart_bottom1 from "../assets/cart/cart_bottom1.svg";
+import cart_bottom2 from "../assets/cart/cart_bottom2.svg";
+import cart_bottom3 from "../assets/cart/cart_bottom3.svg";
+import cart_bottom4 from "../assets/cart/cart_bottom4.svg";
 import LOGO_icon from "/LOGO_icon.svg";
 import axios from "axios";
 
@@ -21,7 +26,24 @@ const Cart = () => {
         console.log(err);
       });
   });
-
+  // console.log(data?.h5);
+  //
+  //
+  //
+  const [productCount, setProductCount] = useState(1);
+  const incrementProductCount = () => {
+    setProductCount(productCount + 1);
+  };
+  const decrementProductCount = () => {
+    if (productCount > 1) {
+      setProductCount(productCount - 1);
+    } else {
+      data = [];
+    }
+  };
+  const resetProductCount = () => {
+    setProductCount((productCount = 0));
+  };
   return (
     <div>
       <div className="mx-auto max-w-[1440px] text-center">
@@ -46,7 +68,7 @@ const Cart = () => {
             <p className="font-semibold text-left ml-8 w-44">Product</p>
             <p className="w-[177px] text-left font-semibold">Price</p>
             <p className="mr-9 text-left font-semibold">Quantity</p>
-            <p className="font-semibold">Subtotal</p>
+            <p className="font-semibold w-[180px]">Subtotal</p>
           </div>
           <div className="content_bottom flex items-center">
             <img
@@ -57,18 +79,95 @@ const Cart = () => {
             <p className="font-semibold text-base text-[#9F9F9F] ml-[34px] text-left w-44">
               {data?.h4}
             </p>
-            <p className="font-semibold text-base text-[#9F9F9F] text-left w-[177px]">
-              {data?.h5}
+            <p className="font-semibold text-base text-[#9F9F9F] text-left w-[180px]">
+              Rs. {data?.h5}
             </p>
-            <p className="font-semibold text-base text-left border-[1px] border-[#9F9F9F] rounded-[5px] border-solid py-1 px-[13px]">
-              {/* {productCount} */}
+            <p className="font-semibold text-base text-left w-[120px]">
+              <div className="border-[1px] border-[#9f9f9f] border-solid flex gap-5 items-center py-3 rounded-[7px] w-[100px] px-3">
+                <button
+                  className="text-base p-1"
+                  onClick={decrementProductCount}>
+                  -
+                </button>
+                <p className="text-base">{productCount}</p>
+                <button
+                  className="text-base p-1"
+                  onClick={incrementProductCount}>
+                  +
+                </button>
+              </div>
             </p>
-            {/* <p className="font-semibold text-left text-base text-right">{data?.h5 * 1}</p> */}
+            <p className="font-semibold text-base text-left ml-8 w-[180px]">
+              Rs. {data?.h5}
+            </p>
+            <img
+              src={delete_icon}
+              alt=""
+              className="cursor-pointer"
+              onClick={resetProductCount}
+            />
           </div>
         </div>
       </div>
       <div className="Cart_bottom bg-[#FAF3EA]">
-        <div className="flex justify-between mx-auto max-w-[1334px]"></div>
+        <div className="flex flex-wrap justify-between mx-auto max-w-[1334px] py-[100px]">
+          <div className="flex gap-[10px]">
+            <img src={cart_bottom1} alt="" className="" />
+            <div className="flex flex-col gap-[2px]">
+              <h3 className="text-[#242424] font-semibold text-[25px]">
+                High Quality
+              </h3>
+              <p
+                className="
+              text-[#898989] font-medium text-xl
+              ">
+                crafted from top materials
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-[10px]">
+            <img src={cart_bottom2} alt="" className="" />
+            <div className="flex flex-col gap-[2px]">
+              <h3 className="text-[#242424] font-semibold text-[25px]">
+                Warranty Protection
+              </h3>
+              <p
+                className="
+              text-[#898989] font-medium text-xl
+              ">
+                Over 2 years
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-[10px]">
+            <img src={cart_bottom3} alt="" className="" />
+            <div className="flex flex-col gap-[2px]">
+              <h3 className="text-[#242424] font-semibold text-[25px]">
+                Free Shipping
+              </h3>
+              <p
+                className="
+              text-[#898989] font-medium text-xl
+              ">
+                Order over 150 $
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-[10px]">
+            <img src={cart_bottom4} alt="" className="" />
+            <div className="flex flex-col gap-[2px]">
+              <h3 className="text-[#242424] font-semibold text-[25px]">
+                24 / 7 Support
+              </h3>
+              <p
+                className="
+              text-[#898989] font-medium text-xl
+              ">
+                Dedicated support
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
