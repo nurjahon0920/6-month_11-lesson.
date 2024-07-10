@@ -63,49 +63,69 @@ const Cart = () => {
             </div>
           </div>
         </div>
-        <div className="Cart_content mt-[72px] mx-auto max-w-[1240px] gap-[30px]">
-          <div className="content_top bg-[#F9F1E7] flex py-4 px-[112px]">
-            <p className="font-semibold text-left ml-8 w-44">Product</p>
-            <p className="w-[177px] text-left font-semibold">Price</p>
-            <p className="mr-9 text-left font-semibold">Quantity</p>
-            <p className="font-semibold w-[180px]">Subtotal</p>
+        <div className="Cart_content mt-[72px] mx-auto max-w-[1240px] gap-[30px] flex pb-[85px]">
+          <div className="flex flex-col">
+            <div className="content_top bg-[#F9F1E7] flex py-4 px-[112px]">
+              <p className="font-semibold text-left ml-8 w-44">Product</p>
+              <p className="w-[177px] text-left font-semibold">Price</p>
+              <p className="mr-9 text-left font-semibold">Quantity</p>
+              <p className="font-semibold w-[180px]">Subtotal</p>
+            </div>
+            <div className="content_bottom flex items-center">
+              <img
+                src={data?.img}
+                alt={data?.h4}
+                className="h-[105px] max-w-[108px] w-full rounded-md"
+              />
+              <p className="font-semibold text-base text-[#9F9F9F] ml-[34px] text-left w-44">
+                {data?.h4}
+              </p>
+              <p className="font-semibold text-base text-[#9F9F9F] text-left w-[180px]">
+                Rs. {data?.h5}
+              </p>
+              <p className="font-semibold text-base text-left w-[120px]">
+                <div className="border-[1px] border-[#9f9f9f] border-solid flex gap-5 items-center py-3 rounded-[7px] w-[100px] px-3">
+                  <button
+                    className="text-base p-1"
+                    onClick={decrementProductCount}>
+                    -
+                  </button>
+                  <p className="text-base">{productCount}</p>
+                  <button
+                    className="text-base p-1"
+                    onClick={incrementProductCount}>
+                    +
+                  </button>
+                </div>
+              </p>
+              <p className="font-semibold text-base text-left ml-8 w-[180px]">
+                Rs. {data?.h5}
+              </p>
+              <img
+                src={delete_icon}
+                alt=""
+                className="cursor-pointer w-7 h-7"
+                onClick={resetProductCount}
+              />
+            </div>
           </div>
-          <div className="content_bottom flex items-center">
-            <img
-              src={data?.img}
-              alt={data?.h4}
-              className="h-[105px] max-w-[108px] w-full rounded-md"
-            />
-            <p className="font-semibold text-base text-[#9F9F9F] ml-[34px] text-left w-44">
-              {data?.h4}
-            </p>
-            <p className="font-semibold text-base text-[#9F9F9F] text-left w-[180px]">
-              Rs. {data?.h5}
-            </p>
-            <p className="font-semibold text-base text-left w-[120px]">
-              <div className="border-[1px] border-[#9f9f9f] border-solid flex gap-5 items-center py-3 rounded-[7px] w-[100px] px-3">
-                <button
-                  className="text-base p-1"
-                  onClick={decrementProductCount}>
-                  -
-                </button>
-                <p className="text-base">{productCount}</p>
-                <button
-                  className="text-base p-1"
-                  onClick={incrementProductCount}>
-                  +
-                </button>
-              </div>
-            </p>
-            <p className="font-semibold text-base text-left ml-8 w-[180px]">
-              Rs. {data?.h5}
-            </p>
-            <img
-              src={delete_icon}
-              alt=""
-              className="cursor-pointer"
-              onClick={resetProductCount}
-            />
+          <div className="content_right bg-[#F9F1E7] pt-[15px] pb-20 px-[75px]">
+            <h3 className="text-[32px] font-bold mb-[61px]">Cart Totals</h3>
+            <div className="flex justify-between pb-[30px]">
+              <h4 className="font-medium text-base">Subtotal</h4>
+              <p className="text-[#9F9F9F]">Rs. {data?.h5}</p>
+            </div>
+            <div className="flex justify-between pb-[42px]">
+              <h4 className="font-medium">Total</h4>
+              <h3 className="text-[#B88E2F] text-xl font-medium">
+                Rs. {data?.h5}
+              </h3>
+            </div>
+            <div className="flex items-center">
+              <button className="bg-[#F9F1E7] text-[#000000] font-semibold py-3 px-[58px] rounded-[7px] border-solid border-[1px] border-black">
+                Checkout
+              </button>
+            </div>
           </div>
         </div>
       </div>
